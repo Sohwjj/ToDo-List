@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>New Task</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form>
+      <mat-form-field>
+        <input matInput placeholder="Description">
+      </mat-form-field>
+      <br>
+      <div>Priority: {{group.value}}</div>
+      <br>
+      <mat-button-toggle-group #group="matButtonToggleGroup">
+        <mat-button-toggle value="Low">Low</mat-button-toggle>
+        <mat-button-toggle value="Medium">Medium</mat-button-toggle>
+        <mat-button-toggle value="High">High</mat-button-toggle>
+      </mat-button-toggle-group>
+      <br>
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Due Date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+
+
+
+
+</mat-card>
